@@ -33,3 +33,16 @@ $(window).scroll(function () {
         a = 1;
     }
 });
+
+$(window).scroll(function () {
+    let header = $("header"),
+      headHeight = header.height(),
+      scroll = $(this).scrollTop();
+
+    if (scroll > headHeight) {
+      header.addClass("fixed animate__fadeInDownBig");
+    } else {
+      header.removeClass("fixed animate__fadeInDownBig");
+    }
+
+  });

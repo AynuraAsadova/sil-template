@@ -20,6 +20,38 @@ li {
     list-style-type: none;
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    // background-color: #fff !important;
+    top: 0;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    left: 0;
+    z-index: 9999;
+    box-shadow: rgb(0 0 0 / 5%) 0px 4px 5px;
+
+    // .navbar-light{
+    //     .navbar-brand{
+    //         color: $DarkGreen !important;
+    //     }
+    
+    //     .nav-link{
+    //         color: $DarkGreen !important;
+    //     }
+    
+    //     .log-in{
+    //         color: $DarkGreen !important;
+    //     }
+    // }
+}
+
 //HEADER
 header {
     background: $DarkGreen;
@@ -609,6 +641,7 @@ main {
 .page_header {
     color: $Dark;
     padding: 80px 0;
+    background: $PaleGray;
 
     .wrapper {
         width: 100%;
@@ -647,6 +680,32 @@ main {
         font-weight: 300;
         font-size: 24px;
         line-height: 36px;
+    }
+}
+
+.social_logos{
+    padding: 50px 0;
+
+    .logo_wrap{
+        text-align: center;
+        width: 200px;
+        padding: 0 20px;
+
+        img{
+            width: 110px;
+            @include transition;
+            opacity: 0.3;
+        }
+
+        img:hover{
+            opacity: 0.7;
+        }
+
+        a{
+            display: block;
+            
+        }
+
     }
 }
 
@@ -732,13 +791,217 @@ footer {
     }
 }
 
+.modal {
+    background-color: $PrimaryLight;
+    color: $Dark;
+
+    .modal-dialog {
+        z-index: 888;
+    }
+
+    .modal-content {
+        box-shadow: 0px 2px 40px rgba(189, 189, 189, 0.11);
+        border-radius: 12px;
+        border: none;
+
+        .modal-body {
+            padding: 45px;
+
+            .modal-title {
+                text-align: center;
+                margin-bottom: 30px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 40px;
+                color: $DarkGreen;
+            }
+
+            form {
+                >div {
+                    margin-bottom: 30px;
+                }
+
+                label {
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+
+                .form-control {
+                    border: 1px solid rgba(32, 72, 79, 0.1);
+                    border-radius: 8px;
+                    height: 50px;
+                }
+
+                .form-control::placeholder {
+                    color: rgba(32, 72, 79, 0.2);
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                input:focus {
+                    box-shadow: none;
+                }
+
+                .form-check {
+                    label {
+                        font-size: 16px;
+                        margin-bottom: 0
+                    }
+                }
+
+                .form-check-input:checked {
+                    background-color: $DarkGreen;
+                    border-color: $DarkGreen;
+                }
+
+                .btn {
+                    @include btn;
+                    background: $DarkGreen;
+                    color: white;
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    text-align: center;
+
+                    a {
+                        color: $DarkGreen;
+                        display: inline-block;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal:before,
+.modal:after {
+    position: absolute;
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 284px;
+}
+
+.modal:before {
+    background-image: url('../img/Decoration-bottom.svg');
+    background-position: bottom right;
+    bottom: 0;
+    right: 0;
+}
+
+.modal:after {
+    background-image: url('../img/Decoration-top.svg');
+    background-position: top left;
+    top: 0;
+    left: 0;
+}
+
+#signInModal {
+    .forgot-pass {
+        text-decoration: underline;
+    }
+}
+
+.tab_panel {
+    color: $Dark;
+    padding: 60px 0;
+
+    .section_title {
+        max-width: 530px;
+        text-align: center;
+        margin: 0 auto 50px;
+
+        h5 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .nav {
+        justify-content: center;
+        margin-bottom: 32px;
+
+        .nav-item {
+            border-bottom: 1px solid rgba(32, 72, 79, 0.2);
+        }
+
+        .nav-link {
+            color: $DarkGreen;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .nav-link.active,
+        .show>.nav-link {
+            color: $DarkGreen;
+            background: transparent;
+            font-weight: 700;
+            border-bottom: 3px solid $DarkGreen;
+            border-radius: 0;
+            padding-bottom: 20px;
+        }
+    }
+
+    .tab-content {
+        .img_wrap {
+            max-width: 750px;
+            position: relative;
+            margin: auto;
+
+            >div {
+                display: flex;
+                align-items: baseline;
+
+                span {
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-family: 'Shadows Into Light', cursive;
+                }
+            }
+
+            .left_vector {
+                @include positionSet(absolute, 134px, -162px);
+            }
+
+            .right_vector {
+                flex-direction: row-reverse;
+                align-items: flex-start;
+                @include positionSet(absolute, 104px, unset, -132px);
+            }
+
+            .bottom_left_vector {
+                flex-direction: column-reverse;
+                @include positionSet(absolute, unset, 130px, unset, 0);
+            }
+
+            .bottom_right_vector {
+                flex-direction: column-reverse;
+                @include positionSet(absolute, unset, unset, 142px, -10px);
+            }
+        }
+    }
+}
 
 @media (min-width: 992px) {
     header {
         .navbar-expand-lg {
             .navbar-nav {
                 .nav-link {
-                    padding: 16px;
+                    padding: 17px;
                 }
             }
         }
@@ -747,6 +1010,12 @@ footer {
     .page_header {
         .wrapper {
             max-width: 789px;
+        }
+    }
+
+    .social_logos {
+        .container{
+            max-width: 900px;
         }
     }
 }
