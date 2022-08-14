@@ -19,32 +19,44 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="/">Quickly<span>.</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon">
+                        <span class="line_menu"></span>
+                        <span class="line_menu"></span>
+                        <span class="line_menu"></span>
+                    </span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Downloads</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse">
+                    <div class="menu_wrapper">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Our Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Downloads</a>
+                            </li>
+                        </ul>
+                        <form class="d-block d-lg-none mt-5">
+                            <button type="button" class="btn sign-up" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">Sign
+                                up</button>
+                            <button type="button" class="btn log-in" data-bs-toggle="modal"
+                                data-bs-target="#signInModal">Log
+                                in</button>
+                        </form>
+                    </div>
 
                 </div>
-                <form class="d-flex">
+                <form class="d-none d-lg-flex">
                     <button type="button" class="btn sign-up" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign
                         up</button>
                     <button type="button" class="btn log-in" data-bs-toggle="modal" data-bs-target="#signInModal">Log
@@ -58,10 +70,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="left_col">
+                    <div class="left_col wow animate__animated animate__fadeInLeft">
                         <div>The new way to work online</div>
                         <h1 class="title">Get the important
-                            work done faster</h1>
+                            work done <span>faster</span></h1>
                         <p class="descr">With Quickly, you can get more productive work done in far less time than ever
                             before with
                             our
@@ -77,7 +89,7 @@
                         <div class="wrapper">
                             <img class="bg_img" src="img/Untitled_Artwork21.svg" alt="">
                             <img class="main_img" src="img/BG_Image.svg" alt="">
-                            <div class="card_top">
+                            <div class="card_top d-none d-md-flex wow animate__animated animate__flipInX">
                                 <div class="img_wrap">
                                     <img src="img/Avatar.svg" alt="">
                                 </div>
@@ -87,7 +99,7 @@
                                 </div>
 
                             </div>
-                            <div class="card_bottom">
+                            <div class="card_bottom d-none d-md-flex wow animate__animated animate__flipInX">
                                 <div class="d-flex flex-wrap align-items-start">
                                     <span class="icon"><i class="fa-solid fa-check"></i></span>
                                     <div class="text">
@@ -110,8 +122,8 @@
         <div class="container">
             <h3 class="section_title">How Quickly helps you get more done</h3>
             <div class="row" style="background-image: url(img/Connector-Vector.svg);">
-                <div class="col-lg-4">
-                    <div class="box box_left">
+                <div class="col-lg-4 col-md-6">
+                    <div class="box box_left wow animate__animated animate__bounceIn">
                         <div class="box_img" style="background-image: url(img/BG1.svg);">
                             <div class="card">
                                 <h4 class="title">Project Overview</h4>
@@ -132,8 +144,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="box box_medium">
+                <div class="col-lg-4 col-md-6">
+                    <div class="box box_center wow animate__animated animate__bounceIn">
                         <div class="box_img" style="background-image: url(img/BG2.svg);">
                             <div class="card">
                                 <div class="d-flex flex-wrap align-items-start">
@@ -152,8 +164,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="box box_right">
+                <div class="col-lg-4 col-md-6">
+                    <div class="box box_right wow animate__animated animate__bounceIn">
                         <div class="box_img" style="background-image: url(img/BG3.svg);">
                             <div class="card">
                                 <div class="img_wrap">
@@ -180,7 +192,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="left_col">
+                    <div class="left_col wow animate__animated animate__fadeIn">
                         <h5 class="title">When we get to work we really make things happen fast and powerfully</h5>
                         <p class="descr">I want to fly like an angel flare on a ten feet snare I want to dance until the
                             sun comes up
@@ -191,7 +203,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="right_col_box">
                                 <div id="counter-box">
                                     <div class="count counter" data-number="32">0</div>
@@ -200,7 +212,7 @@
                                 <p>Designing this section</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="right_col_box">
                                 <div id="counter-box">
                                     <div class="count counter" data-number="412">0</div>
@@ -209,7 +221,7 @@
                                 <p>Working right now</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="right_col_box">
                                 <div id="counter-box">
                                     <div class="count counter" data-number="17">0</div>
@@ -218,7 +230,7 @@
                                 <p>On our table in the pub</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="right_col_box">
                                 <div id="counter-box">
                                     <div class="count counter" data-number="2142">0</div>
@@ -237,7 +249,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card">
+                    <div class="card wow animate__animated animate__zoomIn">
                         <div class="icon">
                             <img src="img/quote-icon.svg" alt="">
                         </div>
@@ -256,7 +268,7 @@
     <section class="ctas">
         <div class="container">
             <div class="row">
-                <div class="col-8 m-auto">
+                <div class="col-lg-8 m-auto wow animate__animated animate__swing">
                     <span>Stop wasting time, start saving it</span>
                     <p>Sign up for your free trial, with the world’s best product tool</p>
                     <a href="#">Start your trial</a>
@@ -277,32 +289,32 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="img_wrap">
-                        <img src="img/Image1.svg" alt="">
+            <div class="row img_container">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="img_wrap wow animate__animated animate__flash">
+                        <img src="img/Image-1.svg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="img_wrap">
-                        <img src="img/Image2.svg" alt="">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="img_wrap wow animate__animated animate__flash">
+                        <img src="img/Image-2.svg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="img_wrap">
-                        <img src="img/Image3.svg" alt="">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="img_wrap wow animate__animated animate__flash">
+                        <img src="img/Image-3.svg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="img_wrap">
-                        <img src="img/Image4.svg" alt="">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="img_wrap wow animate__animated animate__flash">
+                        <img src="img/Image-4.svg" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="tab_panel">
+    <section class="tab_panel wow animate__animated animate__fadeInUp">
         <div class="container">
             <div class="section_title">
                 <h5>How the product works</h5>
@@ -372,8 +384,10 @@
     <section class="page_header">
         <div class="container">
             <div class="wrapper m-auto">
-                <h5>We wanted to build a company that you will love to work with and <span>connect</span> to</h5>
-                <p>We’re doing things bigly, I mean really quite big. The way we operate is different from other
+                <h5 class="wow animate__animated animate__slideInLeft">We wanted to build a company that you will love
+                    to work with and <span>connect</span> to</h5>
+                <p class="wow animate__animated animate__slideInRight">We’re doing things bigly, I mean really quite
+                    big. The way we operate is different from other
                     companies because we disrupt. We break the code, we crack the code as well. </p>
             </div>
         </div>
@@ -382,16 +396,16 @@
     <section class="social_logos">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="logo_wrap">
+                <div class="logo_wrap wow animate__animated animate__zoomIn">
                     <a href="#"><img src="img/logo1.svg" alt=""></a>
                 </div>
-                <div class="logo_wrap">
-                    <a href="#"><img src="img/logo2.png" alt=""></a>
+                <div class="logo_wrap wow animate__animated animate__zoomIn">
+                    <a href="#"><img src="img/logo2.svg" alt=""></a>
                 </div>
-                <div class="logo_wrap">
+                <div class="logo_wrap wow animate__animated animate__zoomIn">
                     <a href="#"><img src="img/logo3.svg" alt=""></a>
                 </div>
-                <div class="logo_wrap">
+                <div class="logo_wrap wow animate__animated animate__zoomIn">
                     <a href="#"><img src="img/logo4.svg" alt=""></a>
                 </div>
             </div>
@@ -402,7 +416,7 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 wow animate__animated animate__fadeInLeft">
                         <a href="/" class="logo">Quickly.</a>
                         <ul class="social_icons">
                             <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
@@ -411,9 +425,9 @@
                             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 wow animate__animated animate__fadeInRight">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <ul class="footer_list">
                                     <li>
                                         <p>Our Company</p>
@@ -424,7 +438,7 @@
                                     <li><a href="#">Investorys</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <ul class="footer_list">
                                     <li>
                                         <p>Our Resources</p>
@@ -435,7 +449,7 @@
                                     <li><a href="#">Slack Channel</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <ul class="footer_list">
                                     <li>
                                         <p>Our Product</p>
@@ -452,7 +466,7 @@
             </div>
         </div>
         <div class="footer_bottom">
-            <div class="copyright">
+            <div class="copyright wow animate__animated animate__fadeInDown">
                 Copyright 2022 Quickly LTD
             </div>
         </div>
@@ -482,8 +496,8 @@
                                 placeholder="Enter password">
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckSignUp">
+                            <label class="form-check-label" for="flexCheckSignUp">
                                 I agree to the terms and conditions
                             </label>
                         </div>
@@ -517,8 +531,8 @@
                                 placeholder="Enter password">
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckLogIn">
+                            <label class="form-check-label" for="flexCheckLogIn">
                                 Remember me on this device
                             </label>
                         </div>
@@ -530,9 +544,15 @@
         </div>
     </div>
 
+
+    <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
